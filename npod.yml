@@ -43,6 +43,14 @@ spec:
                - name: javaapp-ports
                  containerport: 80
                  protocol: TCP
+             resources:
+                     # requests:
+                      #  cpu: 100Mm
+                      #  memory: 64Mi    
+                   limits:
+                     cpu: 500m
+                     memory: 256Mi
+
              startupprobe:
                httpGet:
                  path: "/sravanthi"
